@@ -70,3 +70,7 @@
 (format t "(equal \"string\" \"String\") = ~d ~%" (equal "string" "String"))
 ;;; Check equality with list
 (format t "(equal (list 1 2 3) (list 1 2 3)) = ~d ~%" (equal (list 1 2 3) (list 1 2 3)))
+
+;; Compare int to float and strings with upper/lower case
+(format t "(equalp 1.0 1) = ~d ~%" (equalp 1.0 1))
+(format t "(equalp \"Neil\" \"neil\") = ~d ~%" (equalp "Neil" "neil"))
