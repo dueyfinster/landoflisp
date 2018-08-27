@@ -115,3 +115,45 @@
 
 (format t "*num-2* = ~d ~%" *num-2*)
 (format t "*num-3* = ~d ~%" *num-3*)
+
+
+;;; CASE Statements
+(defvar *sage* 18)
+
+(defun get-school (age)
+    (case age
+        (4 (print "Preschool"))
+        (5 (print "Junior Infants"))
+        (otherwise (print "Secondary school"))
+    )
+)
+
+(get-school *sage*)
+
+;;; Print a newline after print statements
+(terpri)
+
+;;; WHEN Statement
+(when (= *sage* 18)
+    (setf *num-3* 18)
+    (format t "Go to college you're ~d ~%" *num-3*)
+)
+
+;;; UNLESS Statement
+(unless (not (= *sage* 18))
+    (setf *num-3* 20)
+    (format t "You're older then college age ~d ~%" *num-3*)
+)
+
+;;; CONDITIONAL STATEMENT
+(defvar *college-ready* nil)
+(cond ( (>= *sage* 18)
+        (setf *college-ready* 'yes)
+        (format t "Ready for college ~%")
+    )
+    ( (< *sage* 18)
+        (setf *college-ready* 'no)
+        (format t "Not ready for college ~%")
+    )
+    (t (format t "Don't Know ~%"))
+)
