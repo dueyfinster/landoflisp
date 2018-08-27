@@ -74,3 +74,29 @@
 ;; Compare int to float and strings with upper/lower case
 (format t "(equalp 1.0 1) = ~d ~%" (equalp 1.0 1))
 (format t "(equalp \"Neil\" \"neil\") = ~d ~%" (equalp "Neil" "neil"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; Using if statements
+(defvar *age* 18)
+(if (= *age* 18)
+    (format t "You can vote~%")
+    (format t "You can't vote~%"))
+
+;; checks for not equal
+(if (not (= *age* 18))
+    (format t "You can vote~%")
+    (format t "You can't vote~%"))
+
+;; using and statement
+(if (and (<= *age* 14) (>= *age* 67))
+    (format t "Time for work~%")
+    (format t "Work if you want~%")
+)
+
+;; using or statement
+(if (or (<= *age* 14) (>= *age* 67))
+    (format t "Work if you want~%")
+    (format t "Time for work~%")
+)
