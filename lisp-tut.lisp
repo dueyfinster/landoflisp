@@ -182,3 +182,7 @@
 (loop for y from 100 to 110
     do (print y)
 )
+
+;; looping using dotimes
+(dotimes (y 12)
+    (print y))
